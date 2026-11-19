@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zim Elections – Official &amp; Unofficial Phones</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#05060d;--panel:rgba(255,255,255,.05);--line:rgba(120,200,255,.18);--tx:#eaf2ff;--mut:#8d9bb8;--cy:#3df2ff;--vi:#8b5cff;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Manrope,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.logo{font-family:Unbounded,Manrope,system-ui,sans-serif;letter-spacing:-.01em;line-height:1.15;margin:0}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:calc(12px + env(safe-area-inset-top,0px)) 5vw 12px;background:rgba(5,6,13,.7);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.logo{font-size:1.05rem;font-weight:700;color:var(--tx);text-decoration:none}
+.logo i{font-style:normal;color:var(--cy)}
+nav a.l{color:var(--mut);text-decoration:none;margin-left:20px;font-size:.92rem}
+nav a.l:hover{color:var(--cy)}
+.hero{position:relative;min-height:100vh;min-height:100svh;display:grid;align-items:center;padding:110px 5vw 60px;overflow:hidden}
+#gl{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero .tx{position:relative;z-index:2;max-width:560px}
+.hero h1{font-size:clamp(2rem,5.4vw,3.8rem);font-weight:700}
+.hero h1 span{background:linear-gradient(90deg,var(--cy),var(--vi));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mut);font-size:1.05rem;max-width:46ch;margin:18px 0 28px}
+.btn{display:inline-block;padding:13px 24px;border-radius:12px;font-weight:600;text-decoration:none;border:1px solid var(--line);color:var(--tx);cursor:pointer;font:inherit;font-weight:600;background:var(--panel)}
+.btn.p{background:linear-gradient(120deg,var(--cy),var(--vi));color:#04050a;border:0;box-shadow:0 0 28px rgba(61,242,255,.35)}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,.tab:focus-visible,a:focus-visible{outline:2px solid var(--cy);outline-offset:3px}
+.stats{display:flex;gap:28px;margin-top:34px;color:var(--mut);font-size:.9rem;flex-wrap:wrap}
+.stats b{display:block;font-family:Unbounded,sans-serif;color:var(--tx);font-size:1.2rem}
+section{padding:90px 5vw;position:relative}
+.wrap{max-width:1150px;margin:auto}
+h2{font-size:clamp(1.5rem,3.4vw,2.3rem);margin-bottom:10px}
+.sub{color:var(--mut);max-width:58ch;margin:0 0 30px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.tab{padding:10px 20px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--mut);cursor:pointer;font:inherit;font-weight:600}
+.tab[aria-selected=true]{color:#04050a;background:linear-gradient(120deg,var(--cy),var(--vi));border-color:transparent}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px;perspective:1100px}
+.card{position:relative;padding:22px;border-radius:20px;background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid var(--line);transform-style:preserve-3d;transition:transform .15s ease-out,border-color .2s;will-change:transform}
+.card:hover{border-color:var(--cy)}
+.badge{position:absolute;top:16px;right:16px;font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid}
+.badge.o{color:var(--cy);border-color:var(--cy)}
+.badge.u{color:#ffb86b;border-color:#ffb86b}
+.ph{height:170px;display:grid;place-items:center;transform:translateZ(40px)}
+.ph div{width:84px;height:158px;border-radius:18px;background:linear-gradient(150deg,#1c2340,#0a0d1c);border:2px solid #2c3766;box-shadow:0 18px 40px rgba(61,242,255,.18),inset 0 0 18px rgba(139,92,255,.35);position:relative}
+.ph div::after{content:"";position:absolute;top:8px;left:8px;width:22px;height:22px;border-radius:50%;background:radial-gradient(circle,#4a5ad0,#10142a);border:2px solid #333b66}
+.card h3{font-size:1.02rem;margin:8px 0 4px;transform:translateZ(25px)}
+.card .sp{color:var(--mut);font-size:.88rem;margin:0 0 14px}
+.card .row{display:flex;justify-content:space-between;align-items:center;transform:translateZ(30px)}
+.price{font-family:Unbounded,sans-serif;font-size:1.05rem}
+.card .btn{padding:9px 16px;font-size:.88rem}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.feat div{padding:24px;border-radius:18px;background:var(--panel);border:1px solid var(--line)}
+.feat h3{font-size:1rem;margin-bottom:8px;color:var(--cy)}
+.feat p{margin:0;color:var(--mut);font-size:.94rem}
+.contact{text-align:center}
+.contact .sub{margin-inline:auto}
+footer{padding:30px 5vw;text-align:center;color:var(--mut);font-size:.85rem;border-top:1px solid var(--line)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:640px){nav a.l{display:none}}
+</style>
+</head>
+<body>
+<nav><a class="logo" href="#top">Zim <i>Elections</i></a><div><a class="l" href="#shop">Phones</a><a class="l" href="#why">Why us</a><a class="l" href="#contact">Contact</a></div></nav>
+
+<header class="hero" id="top">
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="tx">
+<h1>Next-generation phones, <span>official</span> or unofficial.</h1>
+<p>Zim Elections sells brand-new official phones with full warranty, and budget-friendly unofficial phones, each clearly labeled so you always know what you are buying.</p>
+<a class="btn p" href="#shop">Browse phones</a> <a class="btn" href="#contact">Order now</a>
+<div class="stats"><div><b>100%</b>Genuine devices</div><div><b>2 types</b>Official and unofficial</div><div><b>Same day</b>Order confirmation</div></div>
+</div>
+</header>
+
+<section id="shop"><div class="wrap">
+<h2>Choose your phone</h2>
+<p class="sub">Official phones come with brand warranty. Unofficial phones cost less and carry the shop’s own service support.</p>
+<div class="tabs" role="tablist">
+<button class="tab" role="tab" aria-selected="true" data-f="all">All phones</button>
+<button class="tab" role="tab" aria-selected="false" data-f="official">Official</button>
+<button class="tab" role="tab" aria-selected="false" data-f="unofficial">Unofficial</button>
+</div>
+<div class="grid" id="grid"></div>
+</div></section>
+
+<section id="why"><div class="wrap">
+<h2>Why buy from Zim Elections</h2><p class="sub">Clear labels, honest prices and support after you buy.</p>
+<div class="feat">
+<div><h3>Clear official or unofficial label</h3><p>Every phone shows its type on the card. No surprises at delivery.</p></div>
+<div><h3>Checked before delivery</h3><p>Each phone is tested and its IMEI is verified before it leaves the shop.</p></div>
+<div><h3>Warranty and service</h3><p>Official phones carry brand warranty. Unofficial phones get shop service support.</p></div>
+<div><h3>Order in one tap</h3><p>Tap Order on any phone and your message opens in WhatsApp, ready to send.</p></div>
+</div></div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<h2>Ready to order?</h2>
+<p class="sub">Send us the phone name and your area. We confirm price, stock and delivery.</p>
+<a class="btn p" id="wa" href="#">Chat on WhatsApp</a>
+</div></section>
+<footer>© Zim Elections. All rights reserved.</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+// ---- Edit here: shop WhatsApp number (country code, no +) and phone list ----
+const WA = "8801XXXXXXXXX";
+const PHONES = [
+ {n:"Redmi 17 5G",t:"official",s:"5G · 8GB / 256GB · 50MP camera",p:"৳ 26,999"},
+ {n:"Redmi Note 14",t:"official",s:"AMOLED · 6GB / 128GB · 108MP",p:"৳ 24,999"},
+ {n:"Xiaomi 14T",t:"official",s:"Flagship · 12GB / 256GB · Leica",p:"৳ 62,999"},
+ {n:"Poco X7",t:"unofficial",s:"120Hz · 8GB / 256GB · fast charging",p:"৳ 29,500"},
+ {n:"Galaxy A-Series",t:"unofficial",s:"Dual SIM · 6GB / 128GB · AMOLED",p:"৳ 21,000"},
+ {n:"iPhone 13",t:"unofficial",s:"A15 Bionic · 128GB · dual camera",p:"৳ 58,000"}
+];
+const G=document.getElementById("grid");
+function render(f){
+ G.innerHTML="";
+ PHONES.filter(x=>f==="all"||x.t===f).forEach(x=>{
+  const c=document.createElement("article");c.className="card";
+  const msg=encodeURIComponent("Hello Zim Elections, I want to order: "+x.n+" ("+x.t+")");
+  c.innerHTML='<span class="badge '+(x.t==="official"?"o":"u")+'">'+(x.t==="official"?"Official":"Unofficial")+'</span><div class="ph"><div></div></div><h3>'+x.n+'</h3><p class="sp">'+x.s+'</p><div class="row"><span class="price">'+x.p+'</span><a class="btn p" target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+msg+'">Order</a></div>';
+  c.addEventListener("mousemove",e=>{const r=c.getBoundingClientRect(),dx=(e.clientX-r.left)/r.width-.5,dy=(e.clientY-r.top)/r.height-.5;c.style.transform="rotateY("+dx*14+"deg) rotateX("+(-dy*14)+"deg)"});
+  c.addEventListener("mouseleave",()=>{c.style.transform=""});
+  G.appendChild(c);
+ });
+}
+render("all");
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{
+ document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected",t===b));render(b.dataset.f);
+}));
+document.getElementById("wa").href="https://wa.me/"+WA+"?text="+encodeURIComponent("Hello Zim Elections, I want to order a phone.");
+
+// ---- 3D hero ----
+(function(){
+ try{
+  const cv=document.getElementById("gl"),hero=cv.parentElement;
+  const R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});
+  R.setPixelRatio(Math.min(devicePixelRatio,2));
+  const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(45,1,.1,100);C.position.z=9;
+  S.add(new THREE.AmbientLight(0x6677aa,.9));
+  const l1=new THREE.PointLight(0x3df2ff,2.2,40);l1.position.set(-5,3,6);S.add(l1);
+  const l2=new THREE.PointLight(0x8b5cff,2.2,40);l2.position.set(5,-3,5);S.add(l2);
+  // rounded phone body
+  const w=1.7,h=3.5,r=.32,sh=new THREE.Shape();
+  sh.moveTo(-w/2+r,-h/2);sh.lineTo(w/2-r,-h/2);sh.quadraticCurveTo(w/2,-h/2,w/2,-h/2+r);
+  sh.lineTo(w/2,h/2-r);sh.quadraticCurveTo(w/2,h/2,w/2-r,h/2);sh.lineTo(-w/2+r,h/2);
+  sh.quadraticCurveTo(-w/2,h/2,-w/2,h/2-r);sh.lineTo(-w/2,-h/2+r);sh.quadraticCurveTo(-w/2,-h/2,-w/2+r,-h/2);
+  const body=new THREE.Mesh(new THREE.ExtrudeGeometry(sh,{depth:.16,bevelEnabled:true,bevelSize:.03,bevelThickness:.03,bevelSegments:3}),
+   new THREE.MeshStandardMaterial({color:0x151a33,metalness:.9,roughness:.25}));
+  const ph=new THREE.Group();body.position.z=-.08;ph.add(body);
+  // screen texture
+  const t=document.createElement("canvas");t.width=256;t.height=520;const x=t.getContext("2d");
+  const g=x.createLinearGradient(0,0,256,520);g.addColorStop(0,"#0b1a3a");g.addColorStop(.5,"#3a1d86");g.addColorStop(1,"#07b6c9");
+  x.fillStyle=g;x.fillRect(0,0,256,520);x.fillStyle="#fff";x.font="700 34px sans-serif";x.textAlign="center";x.fillText("Zim",128,230);
+  x.font="600 24px sans-serif";x.fillStyle="#3df2ff";x.fillText("Elections",128,266);
+  x.fillStyle="rgba(255,255,255,.7)";x.font="600 38px sans-serif";x.fillText("9:41",128,90);
+  const scr=new THREE.Mesh(new THREE.PlaneGeometry(w-.2,h-.2),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(t)}));
+  scr.position.z=.115;ph.add(scr);
+  // camera island
+  const cm=new THREE.MeshStandardMaterial({color:0x0a0d1c,metalness:1,roughness:.2});
+  [[.4,1.35],[.4,.85]].forEach(p=>{const c=new THREE.Mesh(new THREE.CylinderGeometry(.2,.2,.1,32),cm);c.rotation.x=Math.PI/2;c.position.set(-.45+p[0]-.4,p[1],-.17);ph.add(c);
+   const ring=new THREE.Mesh(new THREE.TorusGeometry(.2,.025,12,32),new THREE.MeshBasicMaterial({color:0x3df2ff}));ring.position.copy(c.position);ph.add(ring);});
+  S.add(ph);
+  // orbit rings
+  const rings=[];[2.6,3.4].forEach((rad,i)=>{const m=new THREE.Mesh(new THREE.TorusGeometry(rad,.012,8,120),new THREE.MeshBasicMaterial({color:i?0x8b5cff:0x3df2ff,transparent:true,opacity:.6}));m.rotation.x=1.2+i*.5;m.rotation.y=i*.6;S.add(m);rings.push(m)});
+  // particles
+  const N=700,pos=new Float32Array(N*3);for(let i=0;i<N*3;i++)pos[i]=(Math.random()-.5)*26;
+  const pg=new THREE.BufferGeometry();pg.setAttribute("position",new THREE.BufferAttribute(pos,3));
+  const pts=new THREE.Points(pg,new THREE.PointsMaterial({color:0x7fe9ff,size:.05,transparent:true,opacity:.8}));S.add(pts);
+  let mx=0,my=0;
+  addEventListener("pointermove",e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+  function size(){const W=hero.clientWidth,H=hero.clientHeight;R.setSize(W,H,false);C.aspect=W/H;
+   const wide=W>820;ph.position.x=wide?2.6:0;ph.position.y=wide?0:-1.2;rings.forEach(m=>{m.position.copy(ph.position)});ph.scale.setScalar(wide?1:.8);C.updateProjectionMatrix()}
+  size();addEventListener("resize",size);
+  const calm=matchMedia("(prefers-reduced-motion:reduce)").matches;let k=0;
+  function loop(){requestAnimationFrame(loop);if(!calm)k+=.012;
+   ph.rotation.y=Math.sin(k)*.6+mx*.8;ph.rotation.x=my*.5;ph.position.y+=((Math.sin(k*1.4)*.12+(innerWidth>820?0:-1.2))-ph.position.y)*.1;
+   rings[0].rotation.z=k*.6;rings[1].rotation.z=-k*.4;pts.rotation.y=k*.08;R.render(S,C)}
+  loop();
+ }catch(e){document.getElementById("gl").style.display="none"}
+})();
+</script>
+</body>
+</html>
